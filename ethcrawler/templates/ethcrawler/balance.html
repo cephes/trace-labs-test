@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance</title>
+</head>
+<body style="display: flex">
+
+    <div>
+
+    <div style="margin-left: 20px;margin-top: 10px;">
+        <label style="font-weight: bold">ETH Balance:</label>
+        <span>{{balance}}</span>
+    </div>
+    <table style="width:100%;margin-bottom: 20px;margin-top: 30px;margin-right: 20px;" border="1">
+    <thead>
+        <tr>
+          <th>ERC-20 Token Name</th>
+          <th>ERC-20 Token Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for token in fttokens %}
+         <tr>
+          <td style="text-align: center">{{token.tokenName}}</td>
+          <td style="text-align: center">{{token.value}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table></div>
+    <table style="width:20%;margin-top: 60px;margin-left: 20px" border="1">
+    <thead>
+        <tr>
+        <th>ERC-721 Token ID</th>
+        <th>ERC-721 Token Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for token in nfttokens %}
+        <tr>
+          <td style="text-align: center">{{token.tokenID}}</td>
+          <td style="text-align: center">{{token.tokenName}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table></div>
+</div>
+</body>
+</html>

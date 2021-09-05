@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>ETH Crawler</h1>
+    <br>
+ <div>
+    <form action="{% url 'ethcrawler:history' %}">
+        <div style="margin-bottom: 10px">
+            <label>Search Address : </label>
+            <input style="margin-left: 20px;" type="text" name="address1"/>
+        </div>
+        <div>
+            <label>Block Number : </label>
+            <input style="margin-left: 23px;" type="number" name="block" />
+        </div>
+        <input style="margin-left: 40px;margin-top: 20px;margin-bottom: 40px" type="submit" value="history"/>
+
+    </form>
+     <form action="{% url 'ethcrawler:balance' %}" >
+         <div style="margin-bottom: 10px">
+            <label>Search Address : </label>
+            <input style="margin-left: 20px;" type="text" name="address2" />
+        </div>
+        <div>
+            <label>Date Input : </label>
+            <input style="margin-left: 50px;" type="date" name="date" />
+        </div>
+         <button style="margin-left: 40px;margin-top: 20px" type="submit">balance</button>
+
+    </form>
+
+</div>
+</body>
+</html>
